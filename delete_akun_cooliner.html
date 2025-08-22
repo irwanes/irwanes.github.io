@@ -1,0 +1,207 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Petunjuk Penghapusan Akun</title>
+  <meta name="description" content="Panduan resmi untuk menghapus akun, mencakup langkah-langkah, konsekuensi, dan kontak bantuan." />
+  <meta property="og:title" content="Petunjuk Penghapusan Akun" />
+  <meta property="og:description" content="Panduan resmi untuk menghapus akun, mencakup langkah-langkah, konsekuensi, dan kontak bantuan." />
+  <!-- Ganti URL gambar pratinjau ini -->
+  <meta property="og:image" content="public/img/hero-delete-account.png" />
+  <meta name="theme-color" content="#0ea5e9" />
+  <style>
+    :root {
+      --bg: #0b1020;
+      --card: #0f172a;
+      --muted: #94a3b8;
+      --text: #e2e8f0;
+      --brand: #0ea5e9;
+      --danger: #ef4444;
+      --ok: #22c55e;
+      --radius: 16px;
+      --shadow: 0 10px 30px rgba(0,0,0,.35);
+    }
+    * { box-sizing: border-box; }
+    html, body { height: 100%; }
+    body {
+      margin: 0; font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, Noto Sans, sans-serif;
+      background: radial-gradient(1200px 600px at 20% -10%, rgba(14,165,233,.15), transparent 60%),
+                  radial-gradient(1000px 600px at 120% 10%, rgba(99,102,241,.12), transparent 60%),
+                  var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+    }
+    .container { max-width: 980px; margin: 0 auto; padding: 24px; }
+
+    header {
+      display: grid; gap: 18px; align-items: center; grid-template-columns: 80px 1fr; margin-top: 10px;
+      background: linear-gradient(180deg, rgba(255,255,255,.03), rgba(255,255,255,0));
+      border-radius: var(--radius);
+      border: 1px solid rgba(255,255,255,.08);
+      padding: 16px; box-shadow: var(--shadow);
+    }
+    header img.logo { width: 64px; height: 64px; border-radius: 14px; object-fit: cover; border: 1px solid rgba(255,255,255,.15); }
+    header h1 { margin: 0; font-size: 28px; letter-spacing: .3px; }
+    header p { margin: 4px 0 0; color: var(--muted); }
+
+    .hero {
+      margin: 24px 0 8px; position: relative; overflow: hidden;
+      border-radius: var(--radius); border: 1px solid rgba(255,255,255,.08);
+      background: linear-gradient(180deg, rgba(255,255,255,.03), rgba(255,255,255,0));
+      box-shadow: var(--shadow);
+    }
+    .hero img { width: 100%; height: 280px; object-fit: cover; display: block; filter: saturate(1.05) contrast(1.05); }
+    .hero .badge {
+      position: absolute; top: 16px; left: 16px; background: rgba(14,165,233,.15);
+      color: #bfe8fb; padding: 6px 10px; border-radius: 999px; font-size: 12px; border: 1px solid rgba(14,165,233,.35);
+      backdrop-filter: blur(6px);
+    }
+
+    .grid { display: grid; gap: 16px; grid-template-columns: 1fr; }
+    @media (min-width: 900px) { .grid { grid-template-columns: 1.2fr .8fr; } }
+
+    .card {
+      background: rgba(255,255,255,.02);
+      border: 1px solid rgba(255,255,255,.08);
+      border-radius: var(--radius); padding: 18px; box-shadow: var(--shadow);
+    }
+    .card h2 { margin: 0 0 10px; font-size: 20px; }
+    .muted { color: var(--muted); }
+
+    .steps { counter-reset: step; display: grid; gap: 16px; }
+    .step {  gap: 12px; align-items: start; padding: 14px; border: 1px dashed rgba(148,163,184,.35); border-radius: 14px; background: rgba(15,23,42,.35); }
+    .step::before { counter-increment: step; content: counter(step); display: inline-grid; place-items: center; width: 32px; height: 32px; border-radius: 10px; background: rgba(14,165,233,.15); border: 1px solid rgba(14,165,233,.4); font-weight: 700; }
+
+    .step ol { margin: 6px 0 0 20px; padding: 0; }
+    .step li { margin: 6px 0; }
+
+    .figure { border-radius: 14px; overflow: hidden; border: 1px solid rgba(255,255,255,.08); margin: 10px 0 0; }
+    .figure img { width: 100%; height: auto; display: block; }
+
+    .warning { background: rgba(239,68,68,.08); border: 1px solid rgba(239,68,68,.35); color: #fecaca; border-radius: 14px; padding: 14px; }
+    .success { background: rgba(34,197,94,.08); border: 1px solid rgba(34,197,94,.35); color: #bbf7d0; border-radius: 14px; padding: 14px; }
+
+    .actions { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 10px; }
+    .btn { appearance: none; border: 1px solid rgba(255,255,255,.15); background: rgba(14,165,233,.12); color: #e0f2fe; border-radius: 12px; padding: 10px 14px; font-weight: 600; text-decoration: none; display: inline-flex; align-items: center; gap: 8px; cursor: pointer; }
+    .btn:hover { background: rgba(14,165,233,.2); }
+    .btn-danger { background: rgba(239,68,68,.12); color: #fee2e2; border-color: rgba(239,68,68,.35); }
+    .btn-danger:hover { background: rgba(239,68,68,.2); }
+    .btn-ghost { background: transparent; }
+
+    details { background: rgba(255,255,255,.02); border: 1px solid rgba(255,255,255,.08); border-radius: 14px; padding: 14px; }
+    details summary { cursor: pointer; font-weight: 600; }
+    details + details { margin-top: 10px; }
+
+    footer { margin: 30px 0 50px; color: var(--muted); text-align: center; }
+
+    /* Cetak */
+    @media print {
+      body { background: #fff; color: #111827; }
+      header, .hero, .actions { box-shadow: none; }
+      .btn, .badge { display: none !important; }
+      .card, details, .warning, .success { border-color: #e5e7eb; }
+      a { color: #111827; }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <img class="logo" src="img/Cool.png" alt="Logo Aplikasi" />
+      <div>
+        <h1>Petunjuk Penghapusan Akun</h1>
+        <p class="muted">Ikuti panduan ini untuk menghapus akun Anda secara permanen dengan aman.</p>
+        <div class="actions">
+          <button class="btn btn-ghost" onclick="history.back()">⟵ Kembali</button>
+          <a class="btn" href="#langkah-cepat">Lihat Langkah Cepat</a>
+          <button class="btn" onclick="window.print()">🖨 Cetak Panduan</button>
+        </div>
+      </div>
+    </header>
+
+   
+
+    <div class="grid",  style="margin-top:18px">
+      <main class="card" role="main">
+        <h2 id="ringkasan">Ringkasan</h2>
+        <p class="muted">Penghapusan akun bersifat <strong>permanen</strong> dan tidak dapat dibatalkan. Data yang dihapus tidak dapat dipulihkan. Pastikan Anda telah mengekspor data penting sebelum melanjutkan.</p>
+
+        <div class="warning" role="alert">
+          <strong>Konsekuensi:</strong>
+          <ul>
+            <li>Akses ke aplikasi dan layanan terkait dihentikan.</li>
+            <li>Riwayat transaksi dan preferensi akun akan dihapus atau dianonimkan.</li>
+            <li>Langganan aktif akan dihentikan pada periode berjalan sesuai ketentuan.</li>
+          </ul>
+        </div>
+
+        <h2 id="persiapan" style="margin-top:18px">Sebelum Menghapus</h2>
+        <ul>
+          <li>Pastikan tidak ada tagihan atau transaksi yang belum selesai.</li>
+          <li>Unduh/ekspor data yang Anda perlukan.</li>
+          <li>Keluar dari semua perangkat setelah penghapusan selesai.</li>
+        </ul>
+
+        <h2 id="langkah-cepat" style="margin-top:18px">Langkah Cepat</h2>
+        <div class="steps">
+          <div class="step">
+            <div></div>
+            <div>
+              <strong>Lewat Aplikasi (Direkomendasikan)</strong>
+              <ol>
+                <li>Buka aplikasi → Pengaturan</li>
+                <div class="image"><img src="img/menu.jpg"  width="300" height="600" alt="Langkah 1" /></div>
+                <li>Pilih menu <em>Hapus Akun & Data</em>.</li>
+                <div class="image"><img src="img/menu-hapus.jpg" width="300" height="600" alt="Langkah 2" /></div>
+                <li>Pilih menu  <em> Hapus Akun → Hapus Akun Owner</em>.</li>
+                <div class="image"><img src="img/hapus-owner.jpg"  width="300" height="600"alt="Langkah 3" /></div>
+                <li>Baca peringatan dengan seksama.</li>
+                <div class="image"><img src="img/warning.jpg"  width="300" height="600" alt="Langkah 4" /></div>
+                <li>Jika sudah yakin, klik lanjutkan lalu input akun email kamu, lalu tekan tombol <em>Verifikasi</em>.</li>
+                <div class="image"><img src="img/verif.jpg"  width="300" height="600" alt="Langkah 4" /></div>
+                <li>Sistem akan memverifikasi akun kamu, jika berhasil tekan tombol <em>Hapus Akun</em> dan kamu akan otomatis logout, lalu kembali ke halaman Login.</li>
+                <div class="image"><img src="img/hapus.jpg"  width="300" height="600" alt="Langkah 4" /></div>
+                <li>Selesai.</li>
+               </ol>
+            </div>
+          </div>
+        
+
+        <h2 style="margin-top:18px">Setelah Penghapusan</h2>
+        <ul>
+          <li>Anda akan keluar dari semua perangkat.</li>
+          <li>Anda bisa menautkan akun lain ke perangkat anda</li>
+          <li>Anda dapat membuat akun baru kapan saja menggunakan email/nomor yang sama bila tidak dibatasi ketentuan hukum.</li>
+        </ul>
+
+        <h2 style="margin-top:18px">Pertanyaan Umum</h2>
+        <details>
+          <summary>Apakah saya bisa membatalkan penghapusan?</summary>
+          <p>Penghapusan bersifat permanen. Jika tersedia masa tunggu, hal itu akan ditampilkan saat konfirmasi. Bila masa tunggu tidak disebutkan, berarti tidak tersedia.</p>
+        </details>
+        <details>
+          <summary>Bagaimana dengan langganan saya?</summary>
+          <p>Langganan terkait dengan perangkat anda, bukan akun anda. Jadi langganan akan tetap berjalan.</p>
+        </details>
+        <details>
+          <summary>Apakah data saya masih aman?</summary>
+          <p>Data masih aman tersimpan di perangkat anda</p>
+        </details>
+      </main>
+
+      <aside class="card" aria-label="Bantuan & Kontak">
+        <h2>Bantuan & Kontak</h2>
+        <p class="muted">Tim kami siap membantu jika Anda menemui kendala.</p>
+        <ul>
+          <li>Email: <a href="mailto:cs.digitalumkm@gmail.com">cs.digitalumkm@gmail.com</a></li>
+          <li>Instagram: <a href="https://instagram.com/digital.umkm_" >digital.umkm_</a></li>
+         </ul>
+
+     
+      </aside>
+    </div>
+
+    <footer>
+      <small>© <span id="year"></span> Nama Perusahaan. Semua hak dilindungi.</small>
+    </footer
