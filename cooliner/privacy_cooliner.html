@@ -1,0 +1,238 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Kebijakan Privasi – Cooliner (Kasir Kuliner Offline)</title>
+  <meta name="description" content="Kebijakan Privasi resmi untuk aplikasi Cooliner – Kasir Kuliner Offline. Menjelaskan pengumpulan, penggunaan, penyimpanan, dan hak pengguna atas data." />
+  <meta name="theme-color" content="#0ea5e9" />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='0.9em' font-size='90'>🍽️</text></svg>">
+  <style>
+    :root {
+      --bg: #0b1020;
+      --card: #111830;
+      --muted: #91a0b6;
+      --text: #eaf0ff;
+      --brand: #22d3ee;
+      --brand-2: #60a5fa;
+      --ok: #10b981;
+      --warn: #f59e0b;
+      --danger: #ef4444;
+      --radius: 16px;
+      --shadow: 0 10px 30px rgba(0,0,0,.35);
+      --maxw: 960px;
+    }
+    * { box-sizing: border-box; }
+    html, body { height: 100%; }
+    body {
+      margin: 0;
+      font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Noto Sans, Ubuntu, Cantarell, Helvetica Neue, Arial, "Apple Color Emoji", "Segoe UI Emoji";
+      line-height: 1.6;
+      color: var(--text);
+      background: radial-gradient(1000px 600px at 10% -10%, rgba(34,211,238,.08), transparent 40%),
+                  radial-gradient(800px 500px at 90% -20%, rgba(96,165,250,.08), transparent 45%),
+                  var(--bg);
+    }
+    header {
+      position: sticky; top: 0; z-index: 10;
+      backdrop-filter: blur(10px);
+      background: linear-gradient(to bottom, rgba(11,16,32,.9), rgba(11,16,32,.6));
+      border-bottom: 1px solid rgba(255,255,255,.06);
+    }
+    .wrap { max-width: var(--maxw); margin: 0 auto; padding: 24px; }
+    .hero {
+      display: grid; gap: 12px; padding: 28px 0 8px;
+    }
+    h1 { font-size: clamp(28px, 4vw, 40px); margin: 0; letter-spacing: .2px; }
+    .sub { color: var(--muted); font-size: 15px; }
+    .badges { display: flex; gap: 8px; flex-wrap: wrap; align-items: center; }
+    .badge { padding: 6px 10px; border-radius: 999px; font-size: 12px; border: 1px solid rgba(255,255,255,.12); color: var(--muted); }
+
+    nav.toc {
+      margin: 24px 0 8px; padding: 14px; border-radius: var(--radius);
+      background: linear-gradient(180deg, rgba(255,255,255,.04), rgba(255,255,255,.02));
+      border: 1px solid rgba(255,255,255,.06);
+      box-shadow: var(--shadow);
+    }
+    nav.toc a { color: var(--brand); text-decoration: none; }
+    nav.toc ol { margin: 0; padding-left: 18px; }
+
+    main {
+      display: grid; gap: 16px; margin-top: 8px;
+    }
+    section.card {
+      padding: 18px 18px; border-radius: var(--radius);
+      background: linear-gradient(180deg, rgba(255,255,255,.04), rgba(255,255,255,.02));
+      border: 1px solid rgba(255,255,255,.06);
+      box-shadow: var(--shadow);
+    }
+    h2 { margin-top: 0; font-size: clamp(20px, 2.4vw, 26px); }
+    p, li { color: #dbe6ff; }
+    code.inline { background: rgba(255,255,255,.08); padding: 2px 6px; border-radius: 6px; font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace; font-size: .95em; }
+    a { color: var(--brand-2); }
+
+    .footer { color: var(--muted); font-size: 13px; text-align: center; padding: 24px 0 40px; }
+
+    .grid-2 {
+      display: grid; grid-template-columns: 1fr; gap: 16px;
+    }
+    @media (min-width: 840px) {
+      .grid-2 { grid-template-columns: 1.2fr .8fr; align-items: start; }
+    }
+    .notice { font-size: 14px; color: #c7d7ff; }
+    .kbd { border: 1px solid rgba(255,255,255,.2); padding: 2px 6px; border-radius: 6px; font-size: 12px; }
+
+    /* Print-friendly */
+    @media print {
+      header, nav.toc { position: static; box-shadow: none; background: none; border: none; }
+      body { background: #fff; color: #000; }
+      .card { box-shadow: none; border-color: #ddd; }
+      a { color: #0b57d0; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="wrap hero">
+      <h1>Kebijakan Privasi – Cooliner (Kasir Kuliner Offline)</h1>
+      <p class="sub">Kami menghargai privasi Anda. Dokumen ini menjelaskan bagaimana data diproses saat Anda menggunakan aplikasi.</p>
+      <div class="badges">
+        <span class="badge">Terakhir diperbarui: <time datetime="2025-08-13">13 Agustus 2025</time></span>
+        <span class="badge">Mode: Offline-first</span>
+        <span class="badge">GDPR-friendly</span>
+      </div>
+    </div>
+  </header>
+
+  <div class="wrap"><a class="back-button" onclick="goBack()">Kembali</a>
+    <nav class="toc" aria-label="Daftar Isi">
+      <strong>Daftar Isi</strong>
+      <ol>
+        <li><a href="#pengantar">Pengantar</a></li>
+        <li><a href="#pengumpulan">Pengumpulan Informasi</a></li>
+        <li><a href="#penggunaan">Penggunaan Informasi</a></li>
+        <li><a href="#penyimpanan">Penyimpanan & Keamanan Data</a></li>
+        <li><a href="#hak-pengguna">Hak Anda</a></li>
+        <li><a href="#izin">Izin Aplikasi</a></li>
+        <li><a href="#pihak-ketiga">Layanan Pihak Ketiga</a></li>
+        <li><a href="#perubahan">Perubahan Kebijakan</a></li>
+        <li><a href="#kontak">Kontak</a></li>
+      </ol>
+    </nav>
+
+    <main class="grid-2">
+      <div>
+        <section id="pengantar" class="card" aria-labelledby="h-pengantar">
+          <h2 id="h-pengantar">1) Pengantar</h2>
+          <p>Aplikasi <strong>Cooliner – Kasir Kuliner Offline</strong> ("<em>Aplikasi</em>", "<em>Kami</em>") berkomitmen melindungi data yang Anda masukkan. Kebijakan ini berlaku untuk semua pengguna aplikasi.</p>
+        </section>
+
+        <section id="pengumpulan" class="card" aria-labelledby="h-pengumpulan">
+          <h2 id="h-pengumpulan">2) Pengumpulan Informasi</h2>
+          <p>Aplikasi ini <strong>tidak mengirimkan data Anda ke server kami</strong> dan bekerja secara <em>offline-first</em>. Semua informasi operasional tetap tersimpan <strong>lokal di perangkat Anda</strong>.</p>
+          <p><em>Contoh data yang mungkin Anda simpan di perangkat:</em></p>
+          <ul>
+            <li>Data penjualan dan transaksi</li>
+            <li>Data produk, harga, stok</li>
+            <li>Data pelanggan (opsional)</li>
+            <li>Pengaturan & preferensi aplikasi</li>
+          </ul>
+          <p class="notice">Catatan: Jika Anda mengaktifkan fitur <span class="kbd">backup/ekspor</span>, file akan tersimpan ke penyimpanan perangkat atau lokasi yang Anda pilih (mis. Google Drive melalui aplikasi pihak ketiga yang Anda gunakan).</p>
+        </section>
+
+        <section id="penggunaan" class="card" aria-labelledby="h-penggunaan">
+          <h2 id="h-penggunaan">3) Penggunaan Informasi</h2>
+          <ul>
+            <li>Menyediakan fungsi kasir dan manajemen produk</li>
+            <li>Menyimpan riwayat transaksi & laporan</li>
+            <li>Membantu analisis sederhana untuk operasional bisnis</li>
+          </ul>
+          <p>Kami <strong>tidak</strong> menjual, menyewakan, atau membagikan data Anda kepada pihak ketiga untuk tujuan pemasaran.</p>
+        </section>
+
+        <section id="penyimpanan" class="card" aria-labelledby="h-penyimpanan">
+          <h2 id="h-penyimpanan">4) Penyimpanan & Keamanan Data</h2>
+          <ul>
+            <li>Data disimpan <strong>lokal</strong> di perangkat Anda.</li>
+            <li>Anda bertanggung jawab melakukan <strong>backup</strong> berkala.</li>
+            <li>Kami menyarankan melindungi perangkat dengan PIN/sandi/biometrik.</li>
+            <li>Jika perangkat hilang/rusak, data mungkin tidak dapat dipulihkan tanpa cadangan.</li>
+          </ul>
+        </section>
+
+        <section id="hak-pengguna" class="card" aria-labelledby="h-hak">
+          <h2 id="h-hak">5) Hak Anda</h2>
+          <ul>
+            <li><strong>Akses</strong>: melihat data di dalam aplikasi.</li>
+            <li><strong>Ekspor</strong>: mengekspor data untuk cadangan atau migrasi.</li>
+            <li><strong>Hapus</strong>: menghapus data atau mereset aplikasi kapan saja.</li>
+          </ul>
+        </section>
+
+        <section id="izin" class="card" aria-labelledby="h-izin">
+          <h2 id="h-izin">6) Izin Aplikasi</h2>
+          <ul>
+            <li><strong>Penyimpanan</strong>: menyimpan/memuat file cadangan.</li>
+            <li><strong>Kamera (opsional)</strong>: pemindai barcode atau foto produk.</li>
+          </ul>
+          <p>Izin hanya dipakai untuk fungsi tersebut dan tidak digunakan untuk mengumpulkan data pribadi tanpa persetujuan Anda.</p>
+        </section>
+
+        <section id="pihak-ketiga" class="card" aria-labelledby="h-pihak">
+          <h2 id="h-pihak">7) Layanan Pihak Ketiga</h2>
+          <p>Aplikasi inti tidak mengirim data ke server. Jika Anda memilih menggunakan layanan pihak ketiga (misalnya, mengunggah file backup ke layanan cloud melalui aplikasi terpisah), penggunaan Anda pada layanan tersebut tunduk pada kebijakan privasi masing-masing penyedia.</p>
+        </section>
+
+        <section id="perubahan" class="card" aria-labelledby="h-perubahan">
+          <h2 id="h-perubahan">8) Perubahan Kebijakan</h2>
+          <p>Kami dapat memperbarui kebijakan ini dari waktu ke waktu. Versi terbaru akan tersedia di halaman ini dan/atau di dalam aplikasi saat pembaruan dirilis.</p>
+        </section>
+
+        <section id="kontak" class="card" aria-labelledby="h-kontak">
+          <h2 id="h-kontak">9) Kontak</h2>
+          <p>Jika Anda memiliki pertanyaan, saran, atau keluhan terkait kebijakan ini, hubungi kami:</p>
+          <ul>
+            <li>Email: <a href="mailto:support@cooliner.app">cs.digitalumkm@gmail.com</a></li>
+            <li>Nama Pengembang: <strong>Digital UMKM - Solusi Digital untuk UMKM</strong></li>
+            <li>Instagram: <em>digital.umkm_</em></li>
+          </ul>
+        </section>
+      </div>
+
+      <aside class="card" aria-label="Info Tambahan">
+        <h2>Ringkasan Singkat</h2>
+        <ul>
+          <li>✦ <strong>Offline-first:</strong> data tetap di perangkat Anda.</li>
+          <li>✦ <strong>Kendali penuh:</strong> Anda dapat ekspor & hapus kapan saja.</li>
+          <li>✦ <strong>Transparan:</strong> tidak menjual data ke pihak ketiga.</li>
+        </ul>
+        <hr style="border-color: rgba(255,255,255,.08)">
+        <h2>Tips Keamanan</h2>
+        <ul>
+          <li>Aktifkan kunci layar perangkat.</li>
+          <li>Lakukan backup berkala di lokasi yang aman.</li>
+          <li>Perbarui aplikasi untuk perbaikan keamanan terbaru.</li>
+        </ul>
+        <hr style="border-color: rgba(255,255,255,.08)">
+        <h2>Metadata</h2>
+        <p><small>Versi Kebijakan: <strong>1.0</strong></small><br>
+           <small>Terakhir diperbarui: <time datetime="2025-08-13">13 Agustus 2025</time></small></p>
+        <p class="notice"><small>Dokumen ini bersifat umum dan tidak merupakan nasihat hukum. Sesuaikan sesuai proses bisnis Anda.</small></p>
+      </aside>
+    </main>
+
+    <footer class="footer">
+      <p>&copy; <span id="yr"></span> Cooliner. Seluruh hak cipta dilindungi.</p>
+      <p><a href="#">Kembali ke atas ↑</a></p>
+    </footer>
+  </div>
+
+  <script>
+    function goBack() {
+      window.history.back();
+    }
+    // Year auto-fill
+    document.getElementById('yr').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
